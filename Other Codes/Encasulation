@@ -1,0 +1,48 @@
+public class Bank {
+	
+	private long  accountno;
+	private long balance;
+	public long getAccountno() {
+		return accountno;
+	}
+	public void setAccountno(long accountno) {
+		this.accountno = accountno;
+	}
+	public long getBalance() {
+		return balance;
+	}
+	public void setBalance(int balance) {
+		this.balance = balance;
+	}
+	
+	void withdraw(long amount) {
+		if (amount<=balance) {
+			balance=balance-amount;
+			System.out.println(balance);
+		}
+		else {
+			System.out.println("Amount is greater than balance.");
+		}
+		
+		
+	}
+	void credit(long amount) {
+		balance=balance+amount;
+		System.out.println("Balance :" + balance);
+	}
+	
+    public static void main(String[] args) {
+		Bank bb= new Bank();
+		bb.setAccountno(801046);
+		bb.setBalance(1000);
+	
+		System.out.println("Account Number: "+ bb.getAccountno());
+		
+		System.out.println("Amoubnt after deduction: ");
+		bb.withdraw(50);
+		bb.credit(5000);
+		bb.withdraw(150000);
+		System.out.println("Balance:" + bb.getBalance());
+		
+	}
+}
