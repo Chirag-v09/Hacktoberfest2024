@@ -19,6 +19,7 @@ public class Permutation {
                 String newPerm = word.substring(0, i) + firstChar + word.substring(i);
                 permutations.add(newPerm);
             }
+        
         }
 
         return permutations;
